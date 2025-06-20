@@ -1,0 +1,58 @@
+{
+  "name": "open-custom-terminals",
+  "displayName": "Custom terminals",
+  "version": "1.0.0",
+  "description": "根据自定义配置文件批量打开终端并重命名",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "activationEvents": [
+    "onCommand:open-custom-terminals.openAll"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Custom Terminals",
+      "properties": {
+        "customTerminals.terminals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "cwd": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ]
+          },
+          "default": []
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "open-custom-terminals.openAll",
+        "title": "Open All Custom Terminals"
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "vscode": "^1.1.37"
+  }
+}
