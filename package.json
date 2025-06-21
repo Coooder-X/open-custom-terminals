@@ -42,6 +42,10 @@
       {
         "command": "open-custom-terminals.openAll",
         "title": "Open All Custom Terminals"
+      },
+      {
+        "command": "open-custom-terminals.configGUI",
+        "title": "配置自定义终端（可视化）"
       }
     ]
   },
